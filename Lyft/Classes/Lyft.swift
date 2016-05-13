@@ -100,7 +100,7 @@ public class Lyft {
         }
     }
 
-    static func request(type: HTTPMethod, path: String, params: [String: AnyObject]?, completionHandler: ((response: [String: AnyObject]?, error: NSError?) -> ())?) {
+    public static func request(type: HTTPMethod, path: String, params: [String: AnyObject]?, completionHandler: ((response: [String: AnyObject]?, error: NSError?) -> ())?) {
         guard let accessToken = sharedInstance.accessToken else {
             completionHandler?(response: nil, error: NSError(domain: "No clientId and clientSecret", code: 500, userInfo: nil))
             return
