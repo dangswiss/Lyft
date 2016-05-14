@@ -102,7 +102,7 @@ Lyft.requestRidesHistory(ridesHistoryQuery: RidesHistoryQuery(startTime: "2015-1
 
 ## Author
 
-Genady Okrain, genady@okrain.com
+Genady Okrain, genady@okrain.com, [@genadyo](https://twitter.com/genadyo)
 
 ## License
 
