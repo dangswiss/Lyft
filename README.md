@@ -21,6 +21,10 @@ pod "Lyft"
 ```swift
 Lyft.set(clientId: "clientId", clientSecret: "clientSecret")
 ```
+For testing please use sandbox mode:
+```swift
+Lyft.set(clientId: "clientId", clientSecret: "clientSecret", sandbox: true)
+```
 
 ### Deeplinking
 ```swift
