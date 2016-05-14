@@ -1,4 +1,4 @@
-# Lyft
+![Lyft SDK](lyftsdk.png)
 
 [![CI Status](http://img.shields.io/travis/Genady Okrain/Lyft.svg?style=flat)](https://travis-ci.org/Genady Okrain/Lyft)
 [![Version](https://img.shields.io/cocoapods/v/Lyft.svg?style=flat)](http://cocoapods.org/pods/Lyft)
