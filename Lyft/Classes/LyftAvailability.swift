@@ -118,7 +118,6 @@ public extension Lyft {
                             estimatedCostCentsMax = c["estimated_cost_cents_max"] as? Int,
                             estimatedDurationSeconds = c["estimated_duration_seconds"] as? Int,
                             estimatedDistanceMiles = c["estimated_distance_miles"] as? Float,
-                            primetimeConfirmationToken = c["primetime_confirmation_token"] as? String?,
                             primetimePercentage = c["primetime_percentage"] as? String {
                             costEstimateResponse.append(
                                 CostEstimate(
@@ -129,7 +128,7 @@ public extension Lyft {
                                     estimatedCostCentsMax: estimatedCostCentsMax,
                                     estimatedDurationSeconds: estimatedDurationSeconds,
                                     estimatedDistanceMiles: estimatedDistanceMiles,
-                                    primetimeConfirmationToken: primetimeConfirmationToken,
+                                    primetimeConfirmationToken: c["primetime_confirmation_token"] as? String,
                                     primetimePercentage: primetimePercentage
                                 )
                             )
