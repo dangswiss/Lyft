@@ -13,7 +13,7 @@
 import Foundation
 
 public extension Lyft {
-    static func openLyftRide(rideType rideType: RideType, pickup: Address? = nil, destination: Address) {
+    static func openLyftRide(rideType: RideType, pickup: Address? = nil, destination: Address) {
         let url: String
         if let pickup = pickup {
             url = "lyft://ridetype?id=\(rideType.rawValue)&pickup[latitude]=\(pickup.lat)&pickup[longitude]=\(pickup.lng)&destination[latitude]=\(destination.lat)&destination[longitude]=\(destination.lng)"
@@ -21,23 +21,23 @@ public extension Lyft {
             url = "lyft://ridetype?id=\(rideType.rawValue)&destination[latitude]=\(destination.lat)&destination[longitude]=\(destination.lng)"
         }
 
-        if let url = NSURL(string: url) {
-            if UIApplication.sharedApplication().canOpenURL(url) {
-                UIApplication.sharedApplication().openURL(url)
-            } else if let url = NSURL(string: "https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082") {
-                UIApplication.sharedApplication().openURL(url)
+        if let url = URL(string: url) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.openURL(url)
+            } else if let url = URL(string: "https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082") {
+                UIApplication.shared.openURL(url)
             }
         }
     }
 
-    static func openLyftPromo(promoCode: String) {
+    static func openLyftPromo(_ promoCode: String) {
         let url = "lyft://payment?credits=\(promoCode)"
 
-        if let url = NSURL(string: url) {
-            if UIApplication.sharedApplication().canOpenURL(url) {
-                UIApplication.sharedApplication().openURL(url)
-            } else if let url = NSURL(string: "https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082") {
-                UIApplication.sharedApplication().openURL(url)
+        if let url = URL(string: url) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.openURL(url)
+            } else if let url = URL(string: "https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082") {
+                UIApplication.shared.openURL(url)
             }
         }
     }
